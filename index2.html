@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Joabe Henrique</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #ff00ff, #00ffff, #ff9900);
+      padding: 40px;
+      text-align: center;
+      animation: glow 5s infinite alternate;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-shadow: 0 0 20px #00ffff;
+    }
+    @keyframes glow {
+      from { filter: hue-rotate(0deg); }
+      to { filter: hue-rotate(360deg); }
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: #1a1a1a;
+      border: 2px solid #ff00ff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px #00ffff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ff9900;
+    }
+    .card h2 {
+      color: #00ffff;
+      margin-top: 0;
+    }
+    .card p {
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff, #ff9900);
+      color: #000;
+      font-weight: bold;
+    }
+    /* Responsividade */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio Pessoal - Joabe Henrique</h1>
+    <p>Projetos criativos e tecnológicos</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Loja Virtual Fictícia (HTML/CSS/JS/MySQL)</h2>
+      <p>Desenvolvi um projeto completo de e-commerce fictício, integrando front-end responsivo com HTML, CSS e JavaScript, além de um banco de dados MySQL para gerenciar produtos, usuários e pedidos. O sistema simulava uma loja virtual com carrinho de compras e autenticação de clientes.</p>
+    </div>
+
+    <div class="card">
+      <h2>Interfaces Criativas (Photoshop)</h2>
+      <p>No âmbito criativo, explorei o Photoshop para criar interfaces gráficas inspiradas em games. Esse trabalho nasceu do meu interesse em design de jogos, onde desenvolvi menus, HUDs e telas de inventário estilizadas para projetos pessoais.</p>
+    </div>
+
+    <div class="card">
+      <h2>Modelagem 3D para Impressão (Arte 3D)</h2>
+      <p>Realizei um projeto de modelagem 3D para impressão, criando personagens icônicos como Darth Vader. O trabalho envolveu detalhamento de superfícies e ajustes para que o modelo fosse impresso com fidelidade em uma impressora 3D.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Joabe Henrique - Portfólio Digital</p>
+  </footer>
+
+  <script>
+    // Interatividade: efeito neon ao clicar nos cards
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => {
+        card.style.boxShadow = "0 0 60px #ff00ff";
+        setTimeout(() => {
+          card.style.boxShadow = "0 0 20px #00ffff";
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
